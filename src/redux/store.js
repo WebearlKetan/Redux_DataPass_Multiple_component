@@ -8,7 +8,9 @@ const initialState = {
 
 // Reducer
 const reducer = (state = initialState, action) => {
+  
   switch (action.type) {
+     // Handle the action to set the product list
     case 'SET_PRODUCT_LIST':
       return { ...state, productList: action.payload };
     default:
@@ -17,6 +19,7 @@ const reducer = (state = initialState, action) => {
 };
 
 // Create store
+// Create the Redux store with the reducer and thunk middleware
 const store = createStore(reducer, applyMiddleware(thunk));
 
 export default store;

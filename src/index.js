@@ -7,6 +7,7 @@ import './index.css';
 import App from './App';
 
 ReactDOM.render(
+  // Render the main App component with Redux store provider
   <Provider store={store}>
     <App />
   </Provider>,
